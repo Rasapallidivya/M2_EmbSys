@@ -9,10 +9,11 @@
 # Requirements
 
 # High level Requirements
-1.Correct pin allows Transactions
-2.Dispenses Cash
-3.Receipt printed upon demand
-4.ATM state
+1.Card reader
+2.Host processor
+3.Speaker
+4.LCD screen
+5.Receipt printed upon demand
 
 # Low level Requirements
 1.key operated power switch
@@ -20,3 +21,6 @@
 
 
 # Applications
+1.Heavy transactions in Business
+2.Travellers
+3.Banking communications
