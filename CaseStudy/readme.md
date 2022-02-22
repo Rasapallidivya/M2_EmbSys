@@ -9,18 +9,19 @@
 # Requirements
 
 # High level Requirements
-1.Card reader
+1.Vibrating sensor
 2.Host processor
 3.Speaker
 4.LCD screen
 5.Receipt printed upon demand
+6.GSM module
 
 # Low level Requirements
 1.key operated power switch
 2.operating panel
-
+3.Card reader
 
 # Applications
 1.Heavy transactions in Business
 2.Travellers
-3.Banking communications
+3.Banking communications and etc
