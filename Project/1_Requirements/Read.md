@@ -39,9 +39,15 @@ It uses sensors and a microcontroller to automatically control traffic signals.
 
 # Components Used
 Atmega328p
+
 Sensors
+
 Resistors
+
 LED's
+
 SimulIDE
+
 Visual Studio
+
 avr-gcc Make
