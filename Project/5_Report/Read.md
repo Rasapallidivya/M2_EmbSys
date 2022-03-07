@@ -9,6 +9,17 @@ The sensor will give you an indication of the water level in your water tank. If
 # Research
 In this, we are going to interface the water level sensor with the Arduino UNO and we are going to measure the water level of the water tank. If the water level will be low it will turn ON the pump, If the water level is high it will turn it OFF.
 
+# How to calibrate Water level sensor?'
+![005](https://user-images.githubusercontent.com/99243667/157036281-c157bdb9-2b6d-4d8b-b81c-fa8a7fcb0d08.jpg)
+
+To make sure the sensor provides accurate data you need to calibrate the sensor for the particular type of water you are going to use.
+
+Before initiating the project or storing the data in the sensor, you should see what readings you are exactly getting from your sensor.
+
+Make a note of the proper values of your sensor outputs when the sensor is completely dry, when it is partially submerged in the water and when it is completely submerged.
+
+In this calibration, you need to do some trial and error. It will be difficult in starting to calibrate this sensor with accurate values. once you will get the accurate values you can handle the project very well. Now you are ready to start
+
 # Requirements
 # High Level Requirements
 ![001](https://user-images.githubusercontent.com/99243667/157034832-904efb01-7c54-4e5d-830d-05d0d8c638cc.png)
