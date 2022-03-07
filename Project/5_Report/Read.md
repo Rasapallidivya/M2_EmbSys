@@ -55,3 +55,8 @@ Arduino IDE
 
 # Flow Chart
 ![004](https://user-images.githubusercontent.com/99243667/157023847-d02a62c7-b453-48ec-a424-c0a4059372b7.jpg)
+
+# TESTPLAN AND OUTPUT
+![testplan](https://user-images.githubusercontent.com/99243667/157033099-c2eb6c55-bec8-4035-97d5-37d09fb9c197.png)
+
+So many test cases are there but Here above are the some of the mentioned test cases.
