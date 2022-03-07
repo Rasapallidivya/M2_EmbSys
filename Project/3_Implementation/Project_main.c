@@ -1,110 +1,69 @@
-#ifndef __AVR_ATmega328P__
-    #define __AVR_ATmega328P__
-#endif
-#define F_CPU 8000000UL
-#include <avr/io.h>
-#include <util/delay.h>
+int lowerThreshold = 0;
+int upperThreshold = 1023;
 
-#define R1 PB0
-#define Y1 PB1
-#define G1 PB2
+// Sensor pins
+#define sensorPower 7
+#define sensorPin A0
 
-#define R2 PB3
-#define Y2 PB4
-#define G2 PB5
+// Value for storing water level
+int val = 0;
 
-#define R3 PD5
-#define Y3 PD4
-#define G3 PD3
+// Declare pins to which LEDs are connected
+int redLED = 2;
+int yellowLED = 3;
+int greenLED = 4;
 
-#define R4 PD2
-#define Y4 PD1
-#define G4 PD0
+void setup() {
+  Serial.begin(9600);
+  pinMode(sensorPower, OUTPUT);
+  digitalWrite(sensorPower, LOW);
+  
+  // Set LED pins as an OUTPUT
+  pinMode(redLED, OUTPUT);
+  pinMode(yellowLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
 
-int main(void)
-{
-	DDRB = 0xff;
-	DDRD = 0xff;
-	DDRC = 0x00;
-	
-	PORTB = 0x00;
-	PORTD = 0x00;
-	
-    while(1)
-    {
-		if((PINC&0x01) == 0x01)
-		{
-		PORTB |= (1<<G1);
-		PORTB |= (1<<Y2);
-		PORTD |= (1<<R3);
-		PORTD |= (1<<R4);
-		
-		}
-		else if((PINC&0x02) == 0x02)
-		{
-		PORTB |= (1<<R1);
-		PORTB |= (1<<G2);
-		PORTD |= (1<<Y3);
-		PORTD |= (1<<R4);	
-		
-		}
-		
-		else if((PINC&0x04) == 0x04)
-		{
-		PORTB |= (1<<R1);
-		PORTB |= (1<<R2);
-		PORTD |= (1<<G3);
-		PORTD |= (1<<Y4);
-		
-		}
-		
-		else if((PINC&0x08) == 0x08)
-		{
-		PORTB |= (1<<Y1);
-		PORTB |= (1<<R2);
-		PORTD |= (1<<R3);
-		PORTD |= (1<<G4);
-		
-		}
-		
-		else
-		{
-			PORTB = 0x00;
-		PORTD = 0x00;
-			
-		PORTB |= (1<<G1);
-		PORTB |= (1<<Y2);
-		PORTD |= (1<<R3);
-		PORTD |= (1<<R4);
-		_delay_ms(7000);
-		
-		PORTB = 0x00;
-		PORTD = 0x00;
-		
-		PORTB |= (1<<R1);
-		PORTB |= (1<<G2);
-		PORTD |= (1<<Y3);
-		PORTD |= (1<<R4);
-		_delay_ms(7000);
-		
-		PORTB = 0x00;
-		PORTD = 0x00;
-		
-		PORTB |= (1<<R1);
-		PORTB |= (1<<R2);
-		PORTD |= (1<<G3);
-		PORTD |= (1<<Y4);
-		_delay_ms(7000);
-		
-		PORTB = 0x00;
-		PORTD = 0x00;
-		PORTB |= (1<<Y1);
-		PORTB |= (1<<R2);
-		PORTD |= (1<<R3);
-		PORTD |= (1<<G4);
-		_delay_ms(7000);
-		PORTB = 0x00;
-		PORTD = 0x00;
-		}		
-    }
+  // Initially turn off all LEDs
+  digitalWrite(redLED, LOW);
+  digitalWrite(yellowLED, LOW);
+  digitalWrite(greenLED, LOW);
+}
+
+void loop() {
+  int level = readSensor();
+
+  if (level == 0) {
+    Serial.println("Water Level: Empty");
+    digitalWrite(redLED, LOW);
+    digitalWrite(yellowLED, LOW);
+    digitalWrite(greenLED, LOW);
+  }
+  else if (level > 0 && level <= lowerThreshold) {
+    Serial.println("Water Level: Low");
+    digitalWrite(redLED, HIGH);
+    digitalWrite(yellowLED, LOW);
+    digitalWrite(greenLED, LOW);
+  }
+  else if (level > lowerThreshold && level <= upperThreshold) {
+    Serial.println("Water Level: Medium");
+    digitalWrite(redLED, LOW);
+    digitalWrite(yellowLED, HIGH);
+    digitalWrite(greenLED, LOW);
+  }
+  else if (level > upperThreshold) {
+    Serial.println("Water Level: High");
+    digitalWrite(redLED, LOW);
+    digitalWrite(yellowLED, LOW);
+    digitalWrite(greenLED, HIGH);
+  }
+  delay(1000);
+}
+
+//This is a function used to get the reading
+int readSensor() {
+  digitalWrite(sensorPower, HIGH);
+  delay(10);
+  val = analogRead(sensorPin);
+  digitalWrite(sensorPower, LOW);
+  return val;
 }
