@@ -66,3 +66,9 @@ Potentiometer
 SimulIDE
 
 Arduino IDE
+
+
+
+# Here Instead of Water Sensor I have used Potentiometer because it is an analog sensor.
+
+# Took Reference from googleand by researching it on my own.
