@@ -1,4 +1,4 @@
-# WATER LEVEL INDICATOR
+# WATER LEVEL INDICATOR:Interfacing with Arduino
 
 # Description
 
