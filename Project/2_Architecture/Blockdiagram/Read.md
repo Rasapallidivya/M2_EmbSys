@@ -1,3 +1,4 @@
 # BLOCK DIAGRAM
-![04](https://user-images.githubusercontent.com/99243667/156928422-fc2b96fe-96c9-4871-866e-53ba7f5a693e.png)
+![003](https://user-images.githubusercontent.com/99243667/157023323-6d09af50-1bfe-4ec9-b448-aab78e239234.png)
+
 
