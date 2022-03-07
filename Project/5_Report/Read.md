@@ -60,3 +60,13 @@ Arduino IDE
 ![testplan](https://user-images.githubusercontent.com/99243667/157033099-c2eb6c55-bec8-4035-97d5-37d09fb9c197.png)
 
 So many test cases are there but Here above are the some of the mentioned test cases.
+
+# Simulation
+![Simulation ckt](https://user-images.githubusercontent.com/99243667/157035693-c8665f54-e74c-40a8-b445-7c2b1131610b.PNG)
+
+![Simulation ckt2](https://user-images.githubusercontent.com/99243667/157035717-84ff7d2f-962c-455e-a210-a0c8fd2a289b.PNG)
+
+![Simulation ckt3](https://user-images.githubusercontent.com/99243667/157035745-f1217d64-5c56-44ab-b853-91382758b00c.PNG)
+
+
+
