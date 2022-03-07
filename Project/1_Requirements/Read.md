@@ -1,53 +1,55 @@
-# DENSITY BASED TRAFFIC SIGNAL SYSTEM
+# WATER LEVEL INDICATOR
 
 # Description
 
-Nowadays, controlling the traffic becomes major issue because of rapid increase in automobiles and also because of large time delays between traffic lights. So, in order to rectify this problem, we will go for density based traffic lights system. This Project explains you how to control the traffic based on density.
+Nowadays, all over India, there is a water crisis. To solve this crisis, we need proper water management on the individual level and we need a water level indicator. By doing water management at the individual level we can save plenty of water and could get rid of the water crisis.
 
-The project is creating a density-based dynamic traffic signal system, in which the timing of the signal changes automatically in response to the density of traffic at any given intersection. In most cities throughout the world, traffic congestion is a major issue, and as a result,It's time to move away from manual mode or fixed timer mode and toward an automated system with decision-making capabilities.capabilities. The current traffic signalling system is based on a fixed time schedule, which may cause delays.If one lane is open while the others are closed, it is inefficient
+You may have a doubt here about how to do water management individually? Well, it's simple. All we have to do is to use a little sensor in our water storage system i.e. water tank.
 
+The sensor will give you an indication of the water level in your water tank. If you know the water level every time, you can easily turn your water pump ON/OFF as per the need.
 # Research
-Ultrasonic sensors are utilised to assess traffic density in this system. These sensors will always detect traffic on that route. The microcontroller is connected to all of these sensors.The controller detects and regulates the traffic system using these sensors.
-
+In this, we are going to interface the water level sensor with the Arduino UNO and we are going to measure the water level of the water tank. If the water level will be low it will turn ON the pump, If the water level is high it will turn it OFF.
 # Requirements
 
 # High Level Requirements
-![02](https://user-images.githubusercontent.com/99243667/156927450-7c52073d-7bb5-48af-a2d8-5c7810b7a4d0.png)
+![001](https://user-images.githubusercontent.com/99243667/157011178-55876a2f-0394-4878-8858-1b9b9f98dc4b.png)
+
 
 # Low Level Requirements
-![03](https://user-images.githubusercontent.com/99243667/156927612-c317ce52-229d-48ff-9219-076dcd0f4969.png)
+![002](https://user-images.githubusercontent.com/99243667/157011247-16040941-73ca-4ab0-aabf-33cef081c8b9.png)
+
 
 # SWOT Analysis
-![SWOT pic](https://user-images.githubusercontent.com/99243667/156927765-bca2d479-ba1a-46b1-bc0e-a8ded17bbad3.jpg)
+![SWOT pic](https://user-images.githubusercontent.com/99243667/157016169-f307279a-f67a-4e58-90aa-e9f8f7223796.jpg)
+
 
 # 4W'S and 1H
 
 # WHAT
-This project will show you how to use density to control traffic.
+This project will show you how to control the level of water.
 
 # WHEN
-When there is a lot of traffic. Areas with a large population.
+When there is a lot of scarcity of water we can use this method.
 
 # WHY
-It is not necessary to wait for the other signal if there will be no traffic. That signal will be skipped by the system, and it will move on to the next one.
+It is not necessary for controlling the water level manually,instead of manual operation for automatic way we use this method.
 
 # WHERE
-To control traffic automatically and effectively in high-traffic regions.
-
+To control the level of water in water tanks, factories, commercial complexes, apartments, home,Oil tank level control and Pool water level control.
 # HOW
-It uses sensors and a microcontroller to automatically control traffic signals.
+It uses sensors and arduinoUno for automatically controlling of water level.
 
 # Components Used
-Atmega328p
+Arduino Uno
 
-Sensors
+Sensor
 
 Resistors
 
 LED's
 
+Potentiometer
+
 SimulIDE
 
-Visual Studio
-
-avr-gcc Make
+Arduino IDE
